@@ -63,8 +63,6 @@ func postPrice(w http.ResponseWriter, r *http.Request) {
 
 func handleRequest(w http.ResponseWriter, requestId int, urlPackage []int, ip string) {
 
-	defer utils.HandlePanic(w)
-
 	if !isUrlRequestValid(urlPackage, ip, requestId) {
 		panic("No content")
 	}
